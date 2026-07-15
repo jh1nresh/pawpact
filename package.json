@@ -1,0 +1,11 @@
+{
+  "name": "pawpact-auto-battler",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "test": "node --test tests/game-engine.test.js",
+    "check": "node --check src/game-data.js && node --check src/game-engine.js && node --check src/app.js && node --test tests/game-engine.test.js && node scripts/validate.mjs"
+  }
+}

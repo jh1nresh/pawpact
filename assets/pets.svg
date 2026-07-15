@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 128" role="img" aria-labelledby="sprite-title sprite-desc">
+  <title id="sprite-title">PAWPACT pet character sprite sheet</title>
+  <desc id="sprite-desc">Eight original chibi clay and paper-cut cat and dog characters.</desc>
+  <defs>
+    <filter id="pet-shadow" x="-25%" y="-25%" width="150%" height="170%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.8" result="blur"/>
+      <feOffset dy="3" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.055 0 0 0 0 0.047 0 0 0 0 0.16 0 0 0 .34 0" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="orange-fur" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffbb69"/>
+      <stop offset="1" stop-color="#e87847"/>
+    </linearGradient>
+    <linearGradient id="cream-fur" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff4d9"/>
+      <stop offset="1" stop-color="#e8cfa8"/>
+    </linearGradient>
+    <linearGradient id="blue-fur" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#aebcd1"/>
+      <stop offset="1" stop-color="#687692"/>
+    </linearGradient>
+    <linearGradient id="gold-fur" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd67e"/>
+      <stop offset="1" stop-color="#d99b49"/>
+    </linearGradient>
+    <style>
+      .ink{stroke:#24213f;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+      .fine{stroke:#24213f;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+      .shine{fill:none;stroke:#fff9ea;stroke-width:3;stroke-linecap:round;opacity:.55}
+      .eye{fill:#24213f}
+      .nose{fill:#463348;stroke:#24213f;stroke-width:1.7;stroke-linejoin:round}
+      .blush{fill:#f48d8a;opacity:.72}
+    </style>
+
+    <symbol id="orange-cat" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="63" cy="113" rx="39" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M94 83c19-3 26-15 19-24-4-5-12-2-11 4 1 4 7 3 8 0" fill="none" stroke="#d9663d" stroke-width="9" stroke-linecap="round"/>
+        <path d="M40 71c-9 8-12 25-6 37 8 9 50 10 61 0 5-11 1-30-8-38z" fill="url(#orange-fur)" class="ink"/>
+        <path d="M44 92c-7 2-11 9-10 17M85 92c8 3 11 9 10 17" fill="none" class="ink"/>
+        <path d="M49 27 40 11c-2-4-6-2-7 1l-4 28M79 27l14-15c3-3 7-1 7 3l-2 27" fill="#ed8750" class="ink"/>
+        <path d="m43 29-6-10-2 17m52-6 8-10-1 18" fill="#f6aa75" class="fine"/>
+        <path d="M30 49c0-19 14-30 34-30 22 0 36 12 35 32-1 21-16 34-35 34-20 0-34-14-34-36z" fill="url(#orange-fur)" class="ink"/>
+        <path d="M64 22v14m-13-11 7 12m19-11-7 11" fill="none" stroke="#b8513e" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="50" cy="53" rx="5" ry="7" class="eye"/>
+        <ellipse cx="79" cy="53" rx="5" ry="7" class="eye"/>
+        <circle cx="52" cy="51" r="1.6" fill="#fff9ea"/>
+        <circle cx="81" cy="51" r="1.6" fill="#fff9ea"/>
+        <path d="m64 61-5 3 5 4 5-4z" fill="#d85d62" class="fine"/>
+        <path d="M64 68c-2 5-7 5-10 2m10-2c2 5 7 5 10 2" fill="none" class="fine"/>
+        <path d="M45 63H30m16 6-14 3m51-9h15m-16 6 14 4" fill="none" class="fine"/>
+        <ellipse cx="43" cy="64" rx="6" ry="3" class="blush"/>
+        <ellipse cx="85" cy="64" rx="6" ry="3" class="blush"/>
+        <path d="M43 91c8 5 33 5 42 0" class="shine"/>
+      </g>
+    </symbol>
+
+    <symbol id="siamese-cat" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="64" cy="113" rx="38" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M91 82c17 0 26-8 26-18 0-7-6-10-11-6-4 3-1 8 3 8" fill="none" stroke="#51425d" stroke-width="8" stroke-linecap="round"/>
+        <path d="M40 72c-10 10-11 27-6 37 12 8 48 8 60 0 5-12 1-29-8-37z" fill="url(#cream-fur)" class="ink"/>
+        <path d="M36 101c4-7 10-9 16-7l-1 17H35m57-10c-4-7-10-9-16-7l1 17h16" fill="#5a4963" class="ink"/>
+        <path d="m48 29-13-17c-3-4-7-1-7 3l1 31m50-17 14-17c3-4 7-1 7 3l-2 31" fill="#55445d" class="ink"/>
+        <path d="m39 27-5-7 1 15m53-8 5-7-1 15" fill="#b47a87" class="fine"/>
+        <path d="M29 50c0-19 14-31 35-31s36 12 35 32c-1 22-16 34-35 34-20 0-35-13-35-35z" fill="url(#cream-fur)" class="ink"/>
+        <path d="M44 43c4-9 12-13 20-13 9 0 18 5 22 14l-5 25c-10 8-25 8-35 0z" fill="#5a4963" opacity=".94"/>
+        <path d="M47 52c4-4 9-4 13 0m8 0c4-4 9-4 13 0" fill="none" stroke="#9ee7ef" stroke-width="5" stroke-linecap="round"/>
+        <path d="M47 52c4 3 9 3 13 0m8 0c4 3 9 3 13 0" fill="none" class="fine"/>
+        <circle cx="54" cy="52" r="1.6" class="eye"/>
+        <circle cx="75" cy="52" r="1.6" class="eye"/>
+        <path d="m64 61-5 3 5 4 5-4z" fill="#c77a86" class="fine"/>
+        <path d="M64 68c-2 5-7 5-10 2m10-2c2 5 7 5 10 2" fill="none" class="fine"/>
+        <path d="M48 78c7 4 24 4 32 0" class="shine"/>
+      </g>
+    </symbol>
+
+    <symbol id="british-cat" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="64" cy="114" rx="42" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M93 84c13 2 21-2 23-10 2-6-3-10-7-7-3 2-1 6 2 6" fill="none" stroke="#71809a" stroke-width="10" stroke-linecap="round"/>
+        <path d="M31 91c1-18 13-27 33-27 21 0 34 10 35 28l-4 18c-14 9-48 9-62 0z" fill="url(#blue-fur)" class="ink"/>
+        <path d="M32 101c4-6 10-8 17-5l-1 16H31m66-11c-5-6-11-8-18-5l1 16h16" fill="#77859d" class="ink"/>
+        <path d="M43 31 35 17c-2-4-6-3-8 0l-4 24m61-10 10-14c2-4 6-3 8 1l2 24" fill="#8492a8" class="ink"/>
+        <path d="m38 30-6-8-2 13m66-5 3-8 1 14" fill="#b68591" class="fine"/>
+        <path d="M23 52c0-21 17-34 41-34s41 13 41 34-17 35-41 35-41-14-41-35z" fill="url(#blue-fur)" class="ink"/>
+        <path d="M35 38c8-8 20-12 29-12 12 0 23 4 31 13" class="shine"/>
+        <ellipse cx="47" cy="54" rx="6" ry="7" fill="#f6bd58" class="fine"/>
+        <ellipse cx="81" cy="54" rx="6" ry="7" fill="#f6bd58" class="fine"/>
+        <rect x="45.5" y="50" width="3" height="8" rx="1.5" class="eye"/>
+        <rect x="79.5" y="50" width="3" height="8" rx="1.5" class="eye"/>
+        <path d="m64 62-6 3 6 5 6-5z" fill="#54516a" class="fine"/>
+        <path d="M64 70c-3 5-8 5-12 1m12-1c3 5 8 5 12 1" fill="none" class="fine"/>
+        <path d="M38 64H23m16 7-14 4m64-11h15m-16 7 14 4" fill="none" class="fine"/>
+        <ellipse cx="39" cy="65" rx="6" ry="3" class="blush"/>
+        <ellipse cx="89" cy="65" rx="6" ry="3" class="blush"/>
+      </g>
+    </symbol>
+
+    <symbol id="ragdoll-cat" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="64" cy="114" rx="41" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M92 82c17-2 27 6 22 17-3 7-13 7-17 1" fill="none" stroke="#e9d4b6" stroke-width="13" stroke-linecap="round"/>
+        <path d="M37 73c-11 10-13 29-6 38 13 7 53 7 66 0 4-13 0-29-10-38z" fill="#f3e6cf" class="ink"/>
+        <path d="M45 82c6 7 8 18 7 30h24c-1-12 2-23 8-30-10 5-29 5-39 0z" fill="#fff9eb"/>
+        <path d="M32 100c4-7 11-9 18-5l-1 18H31m66-13c-4-7-11-9-18-5l1 18h17" fill="#806874" class="ink"/>
+        <path d="m47 29-13-18c-3-4-7-1-8 3l2 31m52-16 14-18c3-4 7-1 8 3l-2 31" fill="#75606d" class="ink"/>
+        <path d="m38 27-6-8 1 15m56-7 6-8-1 15" fill="#b47c88" class="fine"/>
+        <path d="M27 51c0-20 16-33 37-33 23 0 38 13 37 34-1 22-16 36-37 36-22 0-37-15-37-37z" fill="#f4e8d3" class="ink"/>
+        <path d="M43 42c3-9 12-14 21-14 10 0 19 5 22 14l-6 27c-9 8-23 8-32 0z" fill="#806875"/>
+        <path d="M47 53c4-5 10-5 14 0m6 0c4-5 10-5 14 0" fill="none" stroke="#8be7ef" stroke-width="5" stroke-linecap="round"/>
+        <path d="M47 53c4 3 10 3 14 0m6 0c4 3 10 3 14 0" fill="none" class="fine"/>
+        <circle cx="55" cy="53" r="1.6" class="eye"/>
+        <circle cx="73" cy="53" r="1.6" class="eye"/>
+        <path d="m64 62-5 3 5 4 5-4z" fill="#bd7481" class="fine"/>
+        <path d="M64 69c-2 5-7 5-10 2m10-2c2 5 7 5 10 2" fill="none" class="fine"/>
+        <path d="M43 33c7-7 14-9 21-9" class="shine"/>
+      </g>
+    </symbol>
+
+    <symbol id="shiba-dog" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="64" cy="113" rx="40" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M91 77c15-2 26-11 22-22-3-7-13-6-15 1-1 5 4 8 8 5" fill="none" stroke="#dc7c3f" stroke-width="11" stroke-linecap="round"/>
+        <path d="M36 70c-10 10-12 29-6 40 12 8 56 8 68 0 4-14 0-31-10-40z" fill="url(#orange-fur)" class="ink"/>
+        <path d="M45 76c6 8 8 21 7 36h24c-1-15 2-28 8-36-10 5-29 5-39 0z" fill="#fff0d2"/>
+        <path d="M32 101c4-7 10-8 17-5l-1 16H31m66-11c-4-7-10-8-17-5l1 16h17" fill="#d66f3c" class="ink"/>
+        <path d="M45 29 36 10c-2-4-7-3-8 1l-4 34m59-16 10-19c2-4 7-3 8 1l3 34" fill="#d7743f" class="ink"/>
+        <path d="m38 28-5-10-2 18m59-8 6-10 1 18" fill="#f0ad7f" class="fine"/>
+        <path d="M25 50c0-20 17-32 39-32 23 0 40 12 40 33 0 22-17 36-40 36-22 0-39-15-39-37z" fill="url(#orange-fur)" class="ink"/>
+        <path d="M36 56c3 17 14 25 28 25s25-8 29-25c-7 9-16 10-29 10s-22-1-28-10z" fill="#fff0d2"/>
+        <path d="M43 50c5-4 10-4 15 0m12 0c5-4 10-4 15 0" fill="none" class="ink"/>
+        <circle cx="51" cy="50" r="2.4" class="eye"/>
+        <circle cx="77" cy="50" r="2.4" class="eye"/>
+        <path d="m64 60-6 3 6 5 6-5z" class="nose"/>
+        <path d="M64 68c-3 6-9 6-13 2m13-2c3 6 9 6 13 2" fill="none" class="fine"/>
+        <ellipse cx="42" cy="63" rx="6" ry="3" class="blush"/>
+        <ellipse cx="86" cy="63" rx="6" ry="3" class="blush"/>
+        <path d="M37 35c7-8 16-11 25-11" class="shine"/>
+      </g>
+    </symbol>
+
+    <symbol id="corgi-dog" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="64" cy="114" rx="43" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M93 83c12-1 19-6 18-14" fill="none" stroke="#e27c40" stroke-width="10" stroke-linecap="round"/>
+        <path d="M25 82c7-11 20-16 39-16s33 5 40 16l-5 28c-17 7-53 7-70 0z" fill="url(#orange-fur)" class="ink"/>
+        <path d="M32 99c4-6 10-7 16-4l-1 18H29m70-14c-4-6-10-7-16-4l1 18h18" fill="#fff0d4" class="ink"/>
+        <path d="M43 31 24 9c-3-4-8-1-8 3l3 40m66-21 19-22c3-4 8-1 8 3l-3 40" fill="#e47e42" class="ink"/>
+        <path d="m33 28-11-12 2 25m71-13 11-12-2 25" fill="#f3ae83" class="fine"/>
+        <path d="M20 53c0-21 19-34 44-34s44 13 44 34-19 35-44 35-44-14-44-35z" fill="url(#orange-fur)" class="ink"/>
+        <path d="M58 20h12l7 26c-2 9-7 16-13 22-7-6-11-13-13-22z" fill="#fff3da"/>
+        <path d="M34 58c5 14 15 22 30 22s25-8 30-22c-8 8-18 9-30 9s-22-1-30-9z" fill="#fff3da"/>
+        <ellipse cx="47" cy="51" rx="4" ry="6" class="eye"/>
+        <ellipse cx="81" cy="51" rx="4" ry="6" class="eye"/>
+        <circle cx="48" cy="49" r="1.4" fill="#fff9ea"/>
+        <circle cx="82" cy="49" r="1.4" fill="#fff9ea"/>
+        <path d="m64 61-7 3 7 5 7-5z" class="nose"/>
+        <path d="M64 69c-3 6-9 6-13 2m13-2c3 6 9 6 13 2" fill="none" class="fine"/>
+        <path d="M40 35c7-7 14-10 21-10" class="shine"/>
+      </g>
+    </symbol>
+
+    <symbol id="husky-dog" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="64" cy="114" rx="40" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M91 80c16-1 26-9 23-19-2-7-10-7-14-2" fill="none" stroke="#7a89a3" stroke-width="11" stroke-linecap="round"/>
+        <path d="M35 72c-9 10-11 27-5 39 13 7 55 7 68 0 4-13 0-29-10-39z" fill="url(#blue-fur)" class="ink"/>
+        <path d="M45 77c5 8 7 21 6 35h26c-1-14 1-27 6-35-10 5-28 5-38 0z" fill="#edf2eb"/>
+        <path d="M31 101c4-7 11-8 18-5l-1 17H30m67-12c-4-7-11-8-18-5l1 17h18" fill="#66758e" class="ink"/>
+        <path d="M45 29 34 10c-2-4-7-3-8 1l-3 34m61-16 11-19c2-4 7-3 8 1l2 34" fill="#66758f" class="ink"/>
+        <path d="m37 28-6-10-2 18m62-8 6-10 1 18" fill="#c69ca5" class="fine"/>
+        <path d="M24 51c0-21 17-33 40-33s40 12 40 34c0 21-17 35-40 35S24 73 24 51z" fill="url(#blue-fur)" class="ink"/>
+        <path d="M38 29c7-6 16-9 26-9s19 3 26 9L78 57 64 69 50 57z" fill="#edf2eb"/>
+        <path d="m43 39 17 8-10 18c-8-4-12-12-12-22zm42 0-17 8 10 18c8-4 12-12 12-22z" fill="#596982"/>
+        <path d="M45 52c4-5 10-5 14 0m10 0c4-5 10-5 14 0" fill="none" stroke="#8fe9f1" stroke-width="5" stroke-linecap="round"/>
+        <path d="M45 52c4 3 10 3 14 0m10 0c4 3 10 3 14 0" fill="none" class="fine"/>
+        <circle cx="53" cy="52" r="1.6" class="eye"/>
+        <circle cx="75" cy="52" r="1.6" class="eye"/>
+        <path d="m64 61-7 3 7 5 7-5z" class="nose"/>
+        <path d="M64 69c-3 6-9 6-13 2m13-2c3 6 9 6 13 2" fill="none" class="fine"/>
+      </g>
+    </symbol>
+
+    <symbol id="golden-dog" viewBox="0 0 128 128">
+      <g filter="url(#pet-shadow)">
+        <ellipse cx="64" cy="114" rx="41" ry="7" fill="#17132f" opacity=".2"/>
+        <path d="M93 82c17 0 25-6 24-16" fill="none" stroke="#d99c4a" stroke-width="13" stroke-linecap="round"/>
+        <path d="M35 72c-10 10-12 28-6 39 13 8 57 8 70 0 4-14-1-30-11-39z" fill="url(#gold-fur)" class="ink"/>
+        <path d="M46 79c5 8 7 20 6 33h24c-1-13 2-25 7-33-10 5-27 5-37 0z" fill="#ffe7a7"/>
+        <path d="M31 101c4-7 11-8 18-5l-1 17H30m68-12c-4-7-11-8-18-5l1 17h18" fill="#e8b45d" class="ink"/>
+        <path d="M41 31c-14-6-24 1-21 14 2 10 8 20 18 24l12-33m37-5c14-6 24 1 21 14-2 10-8 20-18 24L78 36" fill="#c98741" class="ink"/>
+        <path d="M27 51c0-20 16-33 37-33s37 13 37 34c0 22-16 36-37 36S27 73 27 51z" fill="url(#gold-fur)" class="ink"/>
+        <path d="M42 57c3 17 10 25 22 25s20-8 23-25c-6 8-13 10-23 10s-17-2-22-10z" fill="#ffe7a7"/>
+        <ellipse cx="49" cy="51" rx="4" ry="6" class="eye"/>
+        <ellipse cx="79" cy="51" rx="4" ry="6" class="eye"/>
+        <circle cx="50" cy="49" r="1.4" fill="#fff9ea"/>
+        <circle cx="80" cy="49" r="1.4" fill="#fff9ea"/>
+        <path d="m64 60-7 3 7 6 7-6z" class="nose"/>
+        <path d="M64 69c-3 5-9 6-13 2m13-2c3 5 9 6 13 2" fill="none" class="fine"/>
+        <path d="M59 72c0 10 10 12 12 2" fill="#ee7d85" class="fine"/>
+        <path d="M39 35c7-7 15-10 23-10" class="shine"/>
+        <ellipse cx="41" cy="63" rx="6" ry="3" class="blush"/>
+        <ellipse cx="87" cy="63" rx="6" ry="3" class="blush"/>
+      </g>
+    </symbol>
+  </defs>
+
+  <g id="sprite-preview" aria-hidden="true">
+    <use href="#orange-cat" xlink:href="#orange-cat" x="0" y="0" width="128" height="128"/>
+    <use href="#siamese-cat" xlink:href="#siamese-cat" x="128" y="0" width="128" height="128"/>
+    <use href="#british-cat" xlink:href="#british-cat" x="256" y="0" width="128" height="128"/>
+    <use href="#ragdoll-cat" xlink:href="#ragdoll-cat" x="384" y="0" width="128" height="128"/>
+    <use href="#shiba-dog" xlink:href="#shiba-dog" x="512" y="0" width="128" height="128"/>
+    <use href="#corgi-dog" xlink:href="#corgi-dog" x="640" y="0" width="128" height="128"/>
+    <use href="#husky-dog" xlink:href="#husky-dog" x="768" y="0" width="128" height="128"/>
+    <use href="#golden-dog" xlink:href="#golden-dog" x="896" y="0" width="128" height="128"/>
+  </g>
+</svg>

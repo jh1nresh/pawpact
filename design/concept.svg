@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1440 900" width="1440" height="900" role="img" aria-labelledby="concept-title concept-desc">
+  <title id="concept-title">PAWPACT primary game screen concept</title>
+  <desc id="concept-desc">A complete auto-battler screen with a five-by-six woven rug board, synergy rail, bench, shop, and battle action.</desc>
+  <defs>
+    <linearGradient id="room" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10122c"/>
+      <stop offset=".68" stop-color="#20213f"/>
+      <stop offset="1" stop-color="#16162f"/>
+    </linearGradient>
+    <radialGradient id="warm-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd88d" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffbd70" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rug-frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4e4be"/>
+      <stop offset=".13" stop-color="#d8bd8f"/>
+      <stop offset=".14" stop-color="#327f81"/>
+      <stop offset=".86" stop-color="#225b66"/>
+      <stop offset=".87" stop-color="#d8bd8f"/>
+      <stop offset="1" stop-color="#f4e4be"/>
+    </linearGradient>
+    <linearGradient id="battle-cell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6f4965"/>
+      <stop offset="1" stop-color="#473a5c"/>
+    </linearGradient>
+    <linearGradient id="home-cell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3d9691"/>
+      <stop offset="1" stop-color="#276a72"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8f7f"/>
+      <stop offset="1" stop-color="#e75e67"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b7ead8"/>
+      <stop offset="1" stop-color="#67c8b8"/>
+    </linearGradient>
+    <pattern id="room-pattern" width="58" height="58" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 29h58M29 0v58" stroke="#8a88b3" stroke-width="2" opacity=".035"/>
+    </pattern>
+    <pattern id="rug-weave" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(14)">
+      <path d="M0 3h18M0 12h18" stroke="#fff0cd" stroke-width="2" opacity=".1"/>
+      <path d="M4 0v18M13 0v18" stroke="#123848" stroke-width="2" opacity=".15"/>
+    </pattern>
+    <filter id="float" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="blur"/>
+      <feOffset dy="9" result="offset"/>
+      <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.025 0 0 0 0 0.022 0 0 0 0 0.09 0 0 0 .48 0" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="selected" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="glow"/>
+      <feColorMatrix in="glow" type="matrix" values="0 0 0 0 .45 0 0 0 0 .95 0 0 0 0 .82 0 0 0 .75 0"/>
+    </filter>
+    <symbol id="enemy-cell" viewBox="0 0 128 76">
+      <path d="M13 2h102l11 11v50l-11 11H13L2 63V13z" fill="url(#battle-cell)" stroke="#aa7890" stroke-width="2"/>
+      <path d="M16 9h96" stroke="#f1c7bb" stroke-width="2" opacity=".13"/>
+      <path d="M8 59 119 14" stroke="#2f2947" stroke-width="3" opacity=".13"/>
+    </symbol>
+    <symbol id="home-cell" viewBox="0 0 128 76">
+      <path d="M13 2h102l11 11v50l-11 11H13L2 63V13z" fill="url(#home-cell)" stroke="#78c8b9" stroke-width="2"/>
+      <path d="M16 9h96" stroke="#e8f2d7" stroke-width="2" opacity=".16"/>
+      <path d="M8 59 119 14" stroke="#123e50" stroke-width="3" opacity=".14"/>
+    </symbol>
+    <symbol id="heart" viewBox="0 0 32 32">
+      <path d="M16 27S4 20 4 11c0-6 8-8 12-2 4-6 12-4 12 2 0 9-12 16-12 16z" fill="#ff857a" stroke="#fff0d2" stroke-width="2"/>
+    </symbol>
+    <symbol id="coin" viewBox="0 0 32 32">
+      <circle cx="16" cy="16" r="12" fill="#f6c969" stroke="#fff0bd" stroke-width="2"/>
+      <path d="M16 9v14m-4-11h6a3 3 0 0 1 0 6h-6m0 0h7" fill="none" stroke="#9f624f" stroke-width="2.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="paw" viewBox="0 0 32 32">
+      <ellipse cx="16" cy="21" rx="9" ry="7" fill="currentColor"/>
+      <circle cx="7" cy="13" r="4" fill="currentColor"/>
+      <circle cx="13" cy="8" r="4" fill="currentColor"/>
+      <circle cx="21" cy="8" r="4" fill="currentColor"/>
+      <circle cx="26" cy="14" r="4" fill="currentColor"/>
+    </symbol>
+  </defs>
+
+  <rect width="1440" height="900" fill="url(#room)"/>
+  <rect width="1440" height="900" fill="url(#room-pattern)"/>
+  <path d="M0 662h1440v238H0z" fill="#111127"/>
+  <path d="M0 665h1440" stroke="#81758f" stroke-width="3" opacity=".2"/>
+  <g opacity=".55">
+    <path d="M0 735h1440M0 822h1440M200 665l-40 235M490 665l-15 235M760 665l5 235M1030 665l24 235M1300 665l47 235" stroke="#8c7f96" stroke-width="2" opacity=".12"/>
+  </g>
+  <ellipse cx="210" cy="330" rx="190" ry="210" fill="url(#warm-glow)" filter="url(#soft)" opacity=".45"/>
+  <ellipse cx="1195" cy="330" rx="210" ry="230" fill="url(#warm-glow)" filter="url(#soft)" opacity=".5"/>
+  <g opacity=".6">
+    <path d="M38 150h145v440H38zM1252 150h150v440h-150z" fill="#15152e" stroke="#514b67" stroke-width="5"/>
+    <path d="M52 172h117v94H52zm0 114h117v94H52zm0 114h117v94H52zm0 114h117v52H52zM1266 172h122v94h-122zm0 114h122v94h-122zm0 114h122v94h-122zm0 114h122v52h-122z" fill="#242443" stroke="#625b78" stroke-width="3"/>
+  </g>
+
+  <!-- restrained top HUD -->
+  <g filter="url(#float)">
+    <path d="M28 21h274l21 27-21 28H28z" fill="#171833" stroke="#514f70" stroke-width="2"/>
+    <circle cx="53" cy="48" r="16" fill="#72cfc0" opacity=".18"/>
+    <use href="#paw" xlink:href="#paw" x="41" y="36" width="24" height="24" color="#8be0ce"/>
+    <text x="79" y="57" fill="#fff0ce" font-family="Avenir Next, Nunito, system-ui, sans-serif" font-size="26" font-weight="800" letter-spacing="5">PAWPACT</text>
+    <path d="M576 21h288l20 27-20 28H576l-20-28z" fill="#171833" stroke="#514f70" stroke-width="2"/>
+    <circle cx="625" cy="48" r="7" fill="#68cabb"/>
+    <circle cx="672" cy="48" r="7" fill="#68cabb"/>
+    <circle cx="719" cy="48" r="7" fill="#fff1ce"/>
+    <circle cx="766" cy="48" r="7" fill="#453e62" stroke="#706988" stroke-width="2"/>
+    <circle cx="813" cy="48" r="7" fill="#453e62" stroke="#706988" stroke-width="2"/>
+    <path d="M628 48h177" stroke="#6a6380" stroke-width="3"/>
+    <path d="M1025 21h165l17 27-17 28h-165l-18-28z" fill="#171833" stroke="#514f70" stroke-width="2"/>
+    <use href="#heart" xlink:href="#heart" x="1042" y="32" width="32" height="32"/>
+    <circle cx="1091" cy="48" r="6" fill="#ff857a"/>
+    <circle cx="1114" cy="48" r="6" fill="#ff857a"/>
+    <circle cx="1137" cy="48" r="6" fill="#ff857a"/>
+    <path d="M1215 21h197v55h-197l-17-28z" fill="#171833" stroke="#514f70" stroke-width="2"/>
+    <use href="#coin" xlink:href="#coin" x="1231" y="32" width="32" height="32"/>
+    <circle cx="1282" cy="48" r="5" fill="#f4c465"/>
+    <circle cx="1301" cy="48" r="5" fill="#f4c465"/>
+    <circle cx="1320" cy="48" r="5" fill="#f4c465"/>
+    <circle cx="1339" cy="48" r="5" fill="#f4c465"/>
+    <circle cx="1358" cy="48" r="5" fill="#f4c465"/>
+    <circle cx="1377" cy="48" r="5" fill="#423b58" stroke="#756b78" stroke-width="2"/>
+  </g>
+
+  <!-- left synergy rail -->
+  <g filter="url(#float)">
+    <path d="M28 130h174l18 19v455l-18 19H28z" fill="#171832" stroke="#4b4a68" stroke-width="2" opacity=".97"/>
+    <path d="M67 178v392" stroke="#484866" stroke-width="5" stroke-linecap="round"/>
+    <g transform="translate(43 158)">
+      <circle cx="24" cy="24" r="24" fill="#3d927f" stroke="#9de0c9" stroke-width="2"/>
+      <path d="M11 25 13 10l8 8h7l8-8 2 15c0 10-6 16-14 16s-13-6-13-16z" fill="#eff0d4" stroke="#25233f" stroke-width="2"/>
+      <circle cx="20" cy="27" r="2" fill="#25233f"/>
+      <circle cx="29" cy="27" r="2" fill="#25233f"/>
+      <g transform="translate(64 5)">
+        <path d="M0 8h78" stroke="#5a5875" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="8" cy="8" r="7" fill="#75d0bd"/>
+        <circle cx="32" cy="8" r="7" fill="#75d0bd"/>
+        <circle cx="56" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <circle cx="78" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <path d="M0 33h70" stroke="#706c85" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+        <path d="M0 33h42" stroke="#97dfc7" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </g>
+    <g transform="translate(43 246)">
+      <circle cx="24" cy="24" r="24" fill="#ad665e" stroke="#f5ac90" stroke-width="2"/>
+      <path d="M12 23c0-10 6-15 12-15 8 0 13 7 13 15v11c-7 9-19 9-25 0z" fill="#fff0d1" stroke="#25233f" stroke-width="2"/>
+      <path d="M14 15 7 9v16m29-10 7-6v16" fill="#d88a63" stroke="#25233f" stroke-width="3" stroke-linecap="round"/>
+      <g transform="translate(64 5)">
+        <path d="M0 8h78" stroke="#5a5875" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="8" cy="8" r="7" fill="#ff957f"/>
+        <circle cx="32" cy="8" r="7" fill="#ff957f"/>
+        <circle cx="56" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <circle cx="78" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <path d="M0 33h70" stroke="#706c85" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+        <path d="M0 33h42" stroke="#ff9a82" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </g>
+    <g transform="translate(43 334)">
+      <circle cx="24" cy="24" r="24" fill="#aa7b48" stroke="#f4cf7d" stroke-width="2"/>
+      <path d="m11 34 10-23 4 11 12-10-9 24z" fill="#ffe4a1" stroke="#28233f" stroke-width="2.5" stroke-linejoin="round"/>
+      <g transform="translate(64 5)">
+        <circle cx="8" cy="8" r="7" fill="#f4ca6a"/>
+        <circle cx="32" cy="8" r="7" fill="#f4ca6a"/>
+        <circle cx="56" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <circle cx="78" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <path d="M0 33h70" stroke="#706c85" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+        <path d="M0 33h42" stroke="#f4ca6a" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </g>
+    <g transform="translate(43 422)">
+      <circle cx="24" cy="24" r="24" fill="#5b6285" stroke="#aeb5da" stroke-width="2"/>
+      <path d="m24 8 14 6v9c0 10-6 16-14 20-8-4-14-10-14-20v-9z" fill="#dfe4e6" stroke="#27243f" stroke-width="2.5"/>
+      <path d="m18 25 5 5 9-12" fill="none" stroke="#5d9f97" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <g transform="translate(64 5)">
+        <circle cx="8" cy="8" r="7" fill="#aeb7d5"/>
+        <circle cx="32" cy="8" r="7" fill="#aeb7d5"/>
+        <circle cx="56" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <circle cx="78" cy="8" r="7" fill="#373650" stroke="#6a6780" stroke-width="2"/>
+        <path d="M0 33h70" stroke="#706c85" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+        <path d="M0 33h42" stroke="#aeb7d5" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </g>
+    <g transform="translate(43 510)">
+      <circle cx="24" cy="24" r="24" fill="url(#coral)" stroke="#ffd0b3" stroke-width="2"/>
+      <use href="#paw" xlink:href="#paw" x="4" y="5" width="29" height="29" color="#fff1d4"/>
+      <use href="#paw" xlink:href="#paw" x="16" y="15" width="25" height="25" color="#8ce0ca"/>
+      <g transform="translate(64 5)">
+        <circle cx="8" cy="8" r="7" fill="#ff8c7a"/>
+        <circle cx="32" cy="8" r="7" fill="#ff8c7a"/>
+        <circle cx="56" cy="8" r="7" fill="#8de0ca"/>
+        <circle cx="78" cy="8" r="7" fill="#8de0ca"/>
+        <path d="M0 33h70" stroke="#706c85" stroke-width="6" stroke-linecap="round" opacity=".35"/>
+        <path d="M0 33h70" stroke="#ff957f" stroke-width="6" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- central woven-rug board -->
+  <g filter="url(#float)">
+    <path d="M230 124c0-18 17-32 38-32h661c21 0 38 14 38 32v522c0 18-17 32-38 32H268c-21 0-38-14-38-32z" fill="url(#rug-frame)" stroke="#15132c" stroke-width="6"/>
+    <path d="M249 124c0-9 9-17 21-17h657c12 0 21 8 21 17v521c0 9-9 17-21 17H270c-12 0-21-8-21-17z" fill="#286c72"/>
+    <path d="M249 124c0-9 9-17 21-17h657c12 0 21 8 21 17v521c0 9-9 17-21 17H270c-12 0-21-8-21-17z" fill="url(#rug-weave)"/>
+    <path d="M249 379h699" stroke="#f6e6bd" stroke-width="4" stroke-dasharray="14 10" opacity=".42"/>
+    <path d="M243 119h712M243 651h712" stroke="#f6e4b8" stroke-width="6" stroke-dasharray="18 13" opacity=".5"/>
+    <g>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="267" y="132" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="399" y="132" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="531" y="132" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="663" y="132" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="795" y="132" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="267" y="214" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="399" y="214" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="531" y="214" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="663" y="214" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="795" y="214" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="267" y="296" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="399" y="296" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="531" y="296" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="663" y="296" width="128" height="76"/>
+      <use href="#enemy-cell" xlink:href="#enemy-cell" x="795" y="296" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="267" y="388" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="399" y="388" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="531" y="388" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="663" y="388" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="795" y="388" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="267" y="470" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="399" y="470" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="531" y="470" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="663" y="470" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="795" y="470" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="267" y="552" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="399" y="552" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="531" y="552" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="663" y="552" width="128" height="76"/>
+      <use href="#home-cell" xlink:href="#home-cell" x="795" y="552" width="128" height="76"/>
+    </g>
+    <path d="M789 383h140v86H789z" fill="none" stroke="#dbffdb" stroke-width="5" stroke-linejoin="round" opacity=".8"/>
+    <path d="m789 383 9-8m131 8 9-8m-149 94 9 8m131-8 9 8" stroke="#84e0c9" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- deployed units -->
+  <g>
+    <g opacity=".9">
+      <ellipse cx="331" cy="197" rx="45" ry="10" fill="#1a1631" opacity=".45"/>
+      <use href="../assets/pets.svg#golden-dog" xlink:href="../assets/pets.svg#golden-dog" x="281" y="104" width="100" height="100"/>
+      <ellipse cx="459" cy="279" rx="45" ry="10" fill="#1a1631" opacity=".45"/>
+      <use href="../assets/pets.svg#british-cat" xlink:href="../assets/pets.svg#british-cat" x="409" y="186" width="100" height="100"/>
+      <ellipse cx="727" cy="197" rx="45" ry="10" fill="#1a1631" opacity=".45"/>
+      <use href="../assets/pets.svg#husky-dog" xlink:href="../assets/pets.svg#husky-dog" x="677" y="104" width="100" height="100"/>
+      <ellipse cx="859" cy="361" rx="45" ry="10" fill="#1a1631" opacity=".45"/>
+      <use href="../assets/pets.svg#ragdoll-cat" xlink:href="../assets/pets.svg#ragdoll-cat" x="809" y="268" width="100" height="100"/>
+    </g>
+    <g filter="url(#float)">
+      <ellipse cx="331" cy="539" rx="46" ry="10" fill="#14293a" opacity=".55"/>
+      <use href="../assets/pets.svg#orange-cat" xlink:href="../assets/pets.svg#orange-cat" x="278" y="438" width="106" height="106"/>
+      <ellipse cx="463" cy="621" rx="46" ry="10" fill="#14293a" opacity=".55"/>
+      <use href="../assets/pets.svg#shiba-dog" xlink:href="../assets/pets.svg#shiba-dog" x="410" y="520" width="106" height="106"/>
+      <ellipse cx="727" cy="539" rx="46" ry="10" fill="#14293a" opacity=".55"/>
+      <use href="../assets/pets.svg#corgi-dog" xlink:href="../assets/pets.svg#corgi-dog" x="674" y="438" width="106" height="106"/>
+      <ellipse cx="859" cy="457" rx="46" ry="10" fill="#14293a" opacity=".55"/>
+      <use href="../assets/pets.svg#siamese-cat" xlink:href="../assets/pets.svg#siamese-cat" x="806" y="356" width="106" height="106"/>
+    </g>
+    <g fill="#f8ce6e" stroke="#5d3e53" stroke-width="2">
+      <path d="m320 439 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2z"/>
+      <path d="m716 439 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2z"/>
+      <path d="m848 357 5 10 11 2-8 8 2 11-10-5-10 5 2-11-8-8 11-2z"/>
+    </g>
+  </g>
+
+  <!-- bottom bench -->
+  <g filter="url(#float)">
+    <path d="M230 704c0-14 12-25 28-25h681c16 0 28 11 28 25v158H230z" fill="#171832" stroke="#514d6c" stroke-width="3"/>
+    <path d="M250 716h697" stroke="#8cd8c6" stroke-width="3" stroke-dasharray="9 9" opacity=".35"/>
+    <g fill="#222440" stroke="#5e5e78" stroke-width="2">
+      <path d="M252 738c0-12 10-22 22-22h82c12 0 22 10 22 22v105H252z"/>
+      <path d="M389 738c0-12 10-22 22-22h82c12 0 22 10 22 22v105H389z"/>
+      <path d="M526 738c0-12 10-22 22-22h82c12 0 22 10 22 22v105H526z"/>
+      <path d="M663 738c0-12 10-22 22-22h82c12 0 22 10 22 22v105H663z"/>
+      <path d="M800 738c0-12 10-22 22-22h82c12 0 22 10 22 22v105H800z"/>
+    </g>
+    <path d="M248 734c0-13 11-23 24-23h86c13 0 24 10 24 23v113H248z" fill="none" stroke="#87dfc7" stroke-width="5"/>
+    <ellipse cx="315" cy="824" rx="48" ry="10" fill="#0d1228" opacity=".5"/>
+    <use href="../assets/pets.svg#ragdoll-cat" xlink:href="../assets/pets.svg#ragdoll-cat" x="260" y="714" width="110" height="110"/>
+    <ellipse cx="452" cy="824" rx="44" ry="9" fill="#0d1228" opacity=".5"/>
+    <use href="../assets/pets.svg#golden-dog" xlink:href="../assets/pets.svg#golden-dog" x="402" y="724" width="100" height="100"/>
+    <g opacity=".34" fill="#8e8ca7">
+      <use href="#paw" xlink:href="#paw" x="559" y="768" width="36" height="36" color="#8e8ca7"/>
+      <use href="#paw" xlink:href="#paw" x="696" y="768" width="36" height="36" color="#8e8ca7"/>
+      <use href="#paw" xlink:href="#paw" x="833" y="768" width="36" height="36" color="#8e8ca7"/>
+    </g>
+    <circle cx="363" cy="728" r="10" fill="#f6c967" stroke="#fff0bf" stroke-width="2"/>
+    <circle cx="499" cy="728" r="10" fill="#f6c967" stroke="#fff0bf" stroke-width="2"/>
+    <circle cx="522" cy="728" r="10" fill="#f6c967" stroke="#fff0bf" stroke-width="2"/>
+  </g>
+
+  <!-- five-card shop -->
+  <g filter="url(#float)">
+    <path d="M1058 106h354v596h-354l-19-24V130z" fill="#171832" stroke="#514e6b" stroke-width="3"/>
+    <path d="M1081 118h308" stroke="#7bd4bf" stroke-width="3" stroke-dasharray="11 8" opacity=".42"/>
+    <g>
+      <path d="M1074 132h317l10 12v82l-10 12h-317l-10-12v-82z" fill="#f2dfbb" stroke="#aa6a64" stroke-width="3"/>
+      <path d="M1074 132h92v106h-92l-10-12v-82z" fill="#d87961" opacity=".82"/>
+      <use href="../assets/pets.svg#orange-cat" xlink:href="../assets/pets.svg#orange-cat" x="1066" y="131" width="104" height="104"/>
+      <path d="M1190 163h132M1190 181h91" stroke="#6d5967" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+      <circle cx="1362" cy="185" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+      <circle cx="1357" cy="185" r="3" fill="#955f4d"/>
+      <circle cx="1367" cy="185" r="3" fill="#955f4d"/>
+      <path d="m1190 208 7-14 7 14 14 2-10 10 3 14-14-7-13 7 2-14-10-10z" fill="#e8a84e" transform="scale(.55) translate(970 168)"/>
+    </g>
+    <g>
+      <path d="M1074 246h317l10 12v82l-10 12h-317l-10-12v-82z" fill="#e8ead4" stroke="#72aa9c" stroke-width="3"/>
+      <path d="M1074 246h92v106h-92l-10-12v-82z" fill="#7abdad" opacity=".78"/>
+      <use href="../assets/pets.svg#siamese-cat" xlink:href="../assets/pets.svg#siamese-cat" x="1066" y="245" width="104" height="104"/>
+      <path d="M1190 277h132M1190 295h91" stroke="#58656d" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+      <circle cx="1340" cy="319" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+      <circle cx="1365" cy="319" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M1074 360h317l10 12v82l-10 12h-317l-10-12v-82z" fill="#f2dfbb" stroke="#aa6a64" stroke-width="3"/>
+      <path d="M1074 360h92v106h-92l-10-12v-82z" fill="#d87961" opacity=".82"/>
+      <use href="../assets/pets.svg#shiba-dog" xlink:href="../assets/pets.svg#shiba-dog" x="1066" y="359" width="104" height="104"/>
+      <path d="M1190 391h132M1190 409h91" stroke="#6d5967" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+      <circle cx="1362" cy="432" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M1074 474h317l10 12v82l-10 12h-317l-10-12v-82z" fill="#dce5e2" stroke="#6c87a2" stroke-width="3"/>
+      <path d="M1074 474h92v106h-92l-10-12v-82z" fill="#7186a4" opacity=".88"/>
+      <use href="../assets/pets.svg#husky-dog" xlink:href="../assets/pets.svg#husky-dog" x="1066" y="473" width="104" height="104"/>
+      <path d="M1190 505h132M1190 523h91" stroke="#586174" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+      <circle cx="1340" cy="546" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+      <circle cx="1365" cy="546" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+    </g>
+    <g>
+      <path d="M1074 588h317l10 12v82l-10 12h-317l-10-12v-82z" fill="#f3e1b9" stroke="#b38354" stroke-width="3"/>
+      <path d="M1074 588h92v106h-92l-10-12v-82z" fill="#d9a051" opacity=".86"/>
+      <use href="../assets/pets.svg#golden-dog" xlink:href="../assets/pets.svg#golden-dog" x="1066" y="587" width="104" height="104"/>
+      <path d="M1190 619h132M1190 637h91" stroke="#6d5e5b" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+      <circle cx="1316" cy="660" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+      <circle cx="1340" cy="660" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+      <circle cx="1365" cy="660" r="18" fill="#f5c664" stroke="#fff1be" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- coral battle action and refresh -->
+  <g filter="url(#float)">
+    <circle cx="1081" cy="791" r="36" fill="url(#mint)" stroke="#e9f0d3" stroke-width="3"/>
+    <path d="M1065 788a18 18 0 0 1 29-11l5 5m-2-12 2 12-12 2M1097 795a18 18 0 0 1-29 11l-5-5m2 12-2-12 12-2" fill="none" stroke="#234a57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M1130 748h250l24 43-24 43h-250l-24-43z" fill="url(#coral)" stroke="#ffd4b3" stroke-width="4"/>
+    <use href="#paw" xlink:href="#paw" x="1161" y="764" width="54" height="54" color="#fff0cf"/>
+    <path d="M1252 772h67l22 19-22 19h-67l17-19z" fill="#a63f5a" opacity=".45"/>
+    <path d="m1300 778 16 13-16 13m23-26 16 13-16 13" fill="none" stroke="#fff0d0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

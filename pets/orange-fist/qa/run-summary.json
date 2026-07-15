@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "completedAt": "2026-07-15T10:26:07Z",
+  "pet": {
+    "id": "orange-fist",
+    "displayName": "橘拳",
+    "spriteVersionNumber": 2
+  },
+  "atlas": {
+    "file": "spritesheet.webp",
+    "sha256": "60eb67e9eef581ff60b23cf62295b5f70f023b9044e5b93a5340c0fd290bccd9",
+    "bytes": 2579362,
+    "width": 1536,
+    "height": 2288,
+    "rows": 11,
+    "columns": 8
+  },
+  "verification": {
+    "standardRows": "pass",
+    "extendedAtlasValidation": "pass",
+    "chromaDespill": "pass",
+    "directionSemantics": "pass",
+    "blindDirectionValidation": "pass with three resolved near-cardinal review warnings",
+    "hardCardinalGates": "pass",
+    "continuity": "pass with independently accepted natural-pose warnings",
+    "finalVisualQa": "pass",
+    "gameCheck": "8 of 8 tests and static validation pass"
+  },
+  "generationJobs": {
+    "complete": 13,
+    "total": 13
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "accepted": true,
+  "reviewedAt": "2026-07-15T10:07:14Z",
+  "reviewer": "independent visual QA",
+  "sourceReport": "qa/look-continuity.json",
+  "boundaryEvidence": {
+    "157.5_to_180_areaRatio": 1.157112097967972,
+    "337.5_to_000_areaRatio": 1.1610406239087416,
+    "337.5_to_000_centerDelta": 12.041594578792296
+  },
+  "resolution": "The two row-boundary changes read as natural foreshortening and head-lift shifts; reported transparent holes align with intentional ear, leg, and tail gaps.",
+  "repairDirections": []
+}

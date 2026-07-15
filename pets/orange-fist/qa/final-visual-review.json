@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "reviewedAt": "2026-07-15T10:26:07Z",
+  "reviewer": "fresh independent final hatch QA",
+  "qaNote": "All nine standard GIFs preserve 橘拳 identity and state loops with correct locomotion facing; the 1536x2288 RGBA v2 atlas has zero validation issues and alpha-preserving despill, coherent cardinal and cross-row direction motion, three forehead bars, an attached tail, resolved near-cardinal warnings, and 13 of 13 complete jobs.",
+  "repairRows": [],
+  "repairNotes": null
+}

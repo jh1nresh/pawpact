@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11132b">
+    <meta
+      name="description"
+      content="PAWPACT 毛球盟約：招募貓狗夥伴、合成升星、啟動羈絆並自動守護午夜零食庫。"
+    >
+    <title>PAWPACT 毛球盟約</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#battle-board">跳到棋盤</a>
+
+    <header class="topbar">
+      <div class="brand-lockup">
+        <span class="brand-mark" aria-hidden="true">●</span>
+        <div>
+          <p class="eyebrow">MIDNIGHT PET HOTEL</p>
+          <h1>PAWPACT <span>毛球盟約</span></h1>
+        </div>
+      </div>
+
+      <dl class="hud" aria-label="本局狀態">
+        <div class="hud-item">
+          <dt>回合</dt>
+          <dd id="round-value">1</dd>
+        </div>
+        <div class="hud-item hearts-item">
+          <dt>旅店耐久</dt>
+          <dd id="hearts-value">3 / 3</dd>
+        </div>
+        <div class="hud-item gold-item">
+          <dt>零食幣</dt>
+          <dd id="gold-value">10</dd>
+        </div>
+      </dl>
+    </header>
+
+    <main class="game-shell">
+      <section class="game-layout" aria-label="PAWPACT 對戰桌">
+        <aside class="panel bond-panel" aria-labelledby="bond-title">
+          <div class="panel-heading">
+            <p class="eyebrow">TEAM BONDS</p>
+            <h2 id="bond-title">羈絆</h2>
+          </div>
+          <ol id="bond-list" class="bond-list"></ol>
+
+          <section class="rules-card" aria-labelledby="rules-title">
+            <p class="eyebrow">30 秒上手</p>
+            <h3 id="rules-title">先混搭，再出擊</h3>
+            <ol>
+              <li>從商店招募貓狗。</li>
+              <li>選備戰夥伴，再點下半場部署。</li>
+              <li>三隻同星自動合成；湊 2 貓＋2 狗啟動盟約。</li>
+            </ol>
+          </section>
+        </aside>
+
+        <section class="arena-panel" aria-labelledby="arena-title">
+          <div class="arena-heading">
+            <div>
+              <p id="phase-label" class="phase-badge">備戰</p>
+              <h2 id="arena-title">午夜零食庫</h2>
+            </div>
+            <div class="scout-block" aria-labelledby="scout-title">
+              <p id="scout-title">本回合訪客</p>
+              <div id="enemy-preview" class="enemy-preview"></div>
+            </div>
+          </div>
+
+          <div class="arena-stage">
+            <div
+              id="battle-board"
+              class="battle-board"
+              tabindex="-1"
+              aria-label="五欄六列棋盤；上半場是敵方，下半場是我方部署區"
+            ></div>
+          </div>
+
+          <div class="battle-console">
+            <section aria-labelledby="log-title">
+              <p class="eyebrow">LIVE PAWPRINTS</p>
+              <h3 id="log-title">戰況</h3>
+              <div id="battle-log" class="battle-log"></div>
+            </section>
+            <div class="battle-controls">
+              <p id="field-count" class="field-count">上場 0 / 4</p>
+              <button id="primary-action" class="primary-action" type="button">
+                開始對戰
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel shop-panel" aria-labelledby="shop-title">
+          <div class="panel-heading shop-heading">
+            <div>
+              <p class="eyebrow">NIGHT MARKET</p>
+              <h2 id="shop-title">招募夥伴</h2>
+            </div>
+            <button id="refresh-shop" class="icon-button" type="button">
+              <span aria-hidden="true">↻</span>
+              <span>刷新 2</span>
+            </button>
+          </div>
+          <div id="shop-list" class="shop-list"></div>
+        </aside>
+      </section>
+
+      <section class="bench-panel" aria-labelledby="bench-title">
+        <div class="bench-heading">
+          <div>
+            <p class="eyebrow">READY ROOM</p>
+            <h2 id="bench-title">備戰區</h2>
+          </div>
+          <p id="selection-hint" class="selection-hint">先招募一位夥伴</p>
+        </div>
+        <div id="bench-list" class="bench-list"></div>
+      </section>
+
+    </main>
+
+    <p id="status-message" class="sr-only" role="status" aria-live="polite"></p>
+
+    <dialog id="result-dialog" class="result-dialog" aria-labelledby="result-title">
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" value="cancel" aria-label="關閉結算視窗">×</button>
+      </form>
+      <div id="result-icon" class="result-icon" aria-hidden="true">✦</div>
+      <p id="result-kicker" class="eyebrow">BATTLE RECEIPT</p>
+      <h2 id="result-title">守住了！</h2>
+      <p id="result-copy" class="result-copy"></p>
+      <dl class="result-stats">
+        <div>
+          <dt>獎勵</dt>
+          <dd id="result-reward">+0</dd>
+        </div>
+        <div>
+          <dt>步數</dt>
+          <dd id="result-ticks">0</dd>
+        </div>
+      </dl>
+      <button id="result-action" class="primary-action" type="button">前往下一回合</button>
+    </dialog>
+
+    <noscript>這款遊戲需要 JavaScript 才能運作。</noscript>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
