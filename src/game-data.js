@@ -20,6 +20,7 @@ export const UNIT_LIBRARY = Object.freeze({
     skill: "pounce",
     skillName: "肉球飛撲",
     skillEnergy: 56,
+    petAssetId: "orange-fist",
     accent: "#ffad63"
   }),
   "siamese-cat": Object.freeze({

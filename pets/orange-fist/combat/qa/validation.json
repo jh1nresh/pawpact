@@ -1,0 +1,662 @@
+{
+  "ok": true,
+  "format": "pawpact-combat-pack",
+  "version": 1,
+  "states": {
+    "attack-combo": {
+      "source": "built-in-imagegen/attack-combo.png",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "row": 0,
+      "frames": 8,
+      "fps": 18,
+      "loop": false,
+      "impactFrame": 4,
+      "facing": "screen-right",
+      "frameMetrics": [
+        {
+          "coverage": 0.30404,
+          "bbox": [
+            63,
+            64,
+            310,
+            358
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 48568
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.29591,
+          "bbox": [
+            37,
+            61,
+            268,
+            360
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 47270
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.29867,
+          "bbox": [
+            19,
+            69,
+            261,
+            360
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 2,
+            "removedComponents": 1,
+            "removedPixels": 84,
+            "keptPixels": 47711
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.29313,
+          "bbox": [
+            19,
+            70,
+            302,
+            360
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 46825
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.30307,
+          "bbox": [
+            56,
+            48,
+            360,
+            332
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 48413
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.31462,
+          "bbox": [
+            32,
+            49,
+            359,
+            332
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 50259
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.27964,
+          "bbox": [
+            21,
+            46,
+            264,
+            332
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 44671
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.29366,
+          "bbox": [
+            19,
+            44,
+            261,
+            333
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 46910
+          },
+          "transparentCorners": true
+        }
+      ],
+      "adjacentDifference": [
+        29.1166,
+        19.8156,
+        23.2932,
+        36.759,
+        20.5281,
+        23.086,
+        13.7325
+      ],
+      "errors": []
+    },
+    "signature-skill": {
+      "source": "built-in-imagegen/signature-skill.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "row": 1,
+      "frames": 8,
+      "fps": 18,
+      "loop": false,
+      "impactFrame": 5,
+      "facing": "screen-right",
+      "frameMetrics": [
+        {
+          "coverage": 0.22892,
+          "bbox": [
+            66,
+            207,
+            334,
+            395
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 36568
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.26271,
+          "bbox": [
+            50,
+            172,
+            318,
+            394
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 41966
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.24497,
+          "bbox": [
+            24,
+            126,
+            300,
+            387
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 2,
+            "removedComponents": 1,
+            "removedPixels": 884,
+            "keptPixels": 39132
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.26782,
+          "bbox": [
+            19,
+            91,
+            317,
+            368
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 42783
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.25647,
+          "bbox": [
+            59,
+            21,
+            349,
+            279
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 40970
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.24305,
+          "bbox": [
+            65,
+            24,
+            317,
+            301
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 38826
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.2349,
+          "bbox": [
+            51,
+            64,
+            288,
+            309
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 37524
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.26182,
+          "bbox": [
+            26,
+            30,
+            272,
+            304
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 41824
+          },
+          "transparentCorners": true
+        }
+      ],
+      "adjacentDifference": [
+        19.6851,
+        29.1844,
+        26.1975,
+        39.6139,
+        22.9622,
+        26.4376,
+        27.967
+      ],
+      "errors": []
+    },
+    "hit-stagger": {
+      "source": "built-in-imagegen/hit-stagger.png",
+      "sourceSize": [
+        1717,
+        916
+      ],
+      "row": 2,
+      "frames": 8,
+      "fps": 14,
+      "loop": false,
+      "impactFrame": 3,
+      "facing": "screen-right",
+      "frameMetrics": [
+        {
+          "coverage": 0.30114,
+          "bbox": [
+            89,
+            87,
+            340,
+            377
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 48105
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.27494,
+          "bbox": [
+            56,
+            96,
+            298,
+            376
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 43920
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.23747,
+          "bbox": [
+            38,
+            161,
+            291,
+            377
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 37934
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.2617,
+          "bbox": [
+            19,
+            122,
+            275,
+            377
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 41805
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.22663,
+          "bbox": [
+            81,
+            115,
+            354,
+            310
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 36203
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.23234,
+          "bbox": [
+            63,
+            57,
+            282,
+            308
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 37115
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.25939,
+          "bbox": [
+            34,
+            38,
+            261,
+            314
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 41436
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.28029,
+          "bbox": [
+            28,
+            35,
+            271,
+            314
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 44774
+          },
+          "transparentCorners": true
+        }
+      ],
+      "adjacentDifference": [
+        29.7738,
+        22.2863,
+        26.8787,
+        39.501,
+        27.9654,
+        21.1426,
+        10.6587
+      ],
+      "errors": []
+    },
+    "victory": {
+      "source": "built-in-imagegen/victory.png",
+      "sourceSize": [
+        1693,
+        929
+      ],
+      "row": 3,
+      "frames": 8,
+      "fps": 11,
+      "loop": true,
+      "impactFrame": null,
+      "facing": "front",
+      "frameMetrics": [
+        {
+          "coverage": 0.28099,
+          "bbox": [
+            89,
+            94,
+            333,
+            377
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 44886
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.26227,
+          "bbox": [
+            70,
+            100,
+            296,
+            374
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 41896
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.27069,
+          "bbox": [
+            51,
+            96,
+            279,
+            373
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 2,
+            "removedComponents": 1,
+            "removedPixels": 308,
+            "keptPixels": 43241
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.23638,
+          "bbox": [
+            19,
+            83,
+            249,
+            347
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 37761
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.23802,
+          "bbox": [
+            86,
+            36,
+            324,
+            293
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 38023
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.23791,
+          "bbox": [
+            44,
+            82,
+            294,
+            302
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 38005
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.24773,
+          "bbox": [
+            47,
+            34,
+            276,
+            305
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 2,
+            "removedComponents": 1,
+            "removedPixels": 1017,
+            "keptPixels": 39573
+          },
+          "transparentCorners": true
+        },
+        {
+          "coverage": 0.24269,
+          "bbox": [
+            19,
+            38,
+            226,
+            305
+          ],
+          "edgePixels": 0,
+          "componentCleanup": {
+            "sourceComponents": 1,
+            "removedComponents": 0,
+            "removedPixels": 0,
+            "keptPixels": 38768
+          },
+          "transparentCorners": true
+        }
+      ],
+      "adjacentDifference": [
+        27.3746,
+        19.2562,
+        25.1086,
+        33.1816,
+        22.8267,
+        26.6465,
+        23.2368
+      ],
+      "errors": []
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "atlas": {
+    "path": "spritesheet.webp",
+    "size": [
+      3072,
+      1664
+    ],
+    "mode": "RGBA",
+    "opaqueCyanPixels": 0
+  }
+}

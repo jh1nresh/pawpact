@@ -65,10 +65,19 @@ function makeElement(tag, className, text) {
   return element;
 }
 
-function makePortrait(unitId, size) {
+function makePortrait(unitId, size, animationState = null) {
   const definition = unitDefinition(unitId);
   const frame = makeElement("span", `pet-portrait pet-portrait--${size}`);
   frame.style.setProperty("--pet-accent", definition.accent);
+  if (size === "board" && definition.petAssetId && animationState && !prefersReducedMotion.matches) {
+    const image = document.createElement("img");
+    image.src = `./pets/${definition.petAssetId}/combat/animations/${animationState}.png`;
+    image.alt = "";
+    image.setAttribute("aria-hidden", "true");
+    frame.classList.add("pet-portrait--combat");
+    frame.append(image);
+    return frame;
+  }
   const svg = document.createElementNS(SVG_NS, "svg");
   svg.setAttribute("viewBox", "0 0 128 128");
   svg.setAttribute("aria-hidden", "true");
@@ -195,7 +204,7 @@ function makeUnitToken(unit, inBattle) {
   const definition = unitDefinition(unit.unitId);
   const token = makeElement("span", `unit-token unit-token--${unit.team}`);
   token.style.setProperty("--pet-accent", definition.accent);
-  token.append(makePortrait(unit.unitId, "board"));
+  token.append(makePortrait(unit.unitId, "board", inBattle ? unit.animationState : null));
 
   const meta = makeElement("span", "unit-token-meta");
   meta.append(makeElement("span", "unit-token-name", definition.name), makeStars(unit.star));
@@ -449,11 +458,11 @@ function scheduleBattleTick() {
     if (outcome) {
       const message = outcome === "win" ? "我方勝利，零食庫安全。" : outcome === "loss" ? "我方落敗，請查看結算。" : "本回合平手。";
       announce(message);
-      window.setTimeout(openResultDialog, prefersReducedMotion.matches ? 0 : 180);
+      window.setTimeout(openResultDialog, prefersReducedMotion.matches ? 0 : 800);
     } else {
       scheduleBattleTick();
     }
-  }, prefersReducedMotion.matches ? 90 : 430);
+  }, prefersReducedMotion.matches ? 90 : 650);
 }
 
 function startBattleFlow() {
