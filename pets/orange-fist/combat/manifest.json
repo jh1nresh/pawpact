@@ -1,0 +1,61 @@
+{
+  "format": "pawpact-combat-pack",
+  "version": 1,
+  "petId": "orange-fist",
+  "unitId": "orange-cat",
+  "sourceAtlas": {
+    "path": "spritesheet.webp",
+    "width": 3072,
+    "height": 1664,
+    "frameWidth": 384,
+    "frameHeight": 416,
+    "columns": 8,
+    "rows": 4
+  },
+  "runtimeFrame": {
+    "width": 192,
+    "height": 208
+  },
+  "states": {
+    "attack-combo": {
+      "row": 0,
+      "frames": 8,
+      "fps": 18,
+      "loop": false,
+      "impactFrame": 4,
+      "facing": "screen-right",
+      "mirrorSafe": false,
+      "runtimePath": "animations/attack-combo.png"
+    },
+    "signature-skill": {
+      "row": 1,
+      "frames": 8,
+      "fps": 18,
+      "loop": false,
+      "impactFrame": 5,
+      "facing": "screen-right",
+      "mirrorSafe": false,
+      "runtimePath": "animations/signature-skill.png"
+    },
+    "hit-stagger": {
+      "row": 2,
+      "frames": 8,
+      "fps": 14,
+      "loop": false,
+      "impactFrame": 3,
+      "facing": "screen-right",
+      "mirrorSafe": false,
+      "runtimePath": "animations/hit-stagger.png"
+    },
+    "victory": {
+      "row": 3,
+      "frames": 8,
+      "fps": 11,
+      "loop": true,
+      "impactFrame": null,
+      "facing": "front",
+      "mirrorSafe": false,
+      "runtimePath": "animations/victory.png"
+    }
+  }
+}
