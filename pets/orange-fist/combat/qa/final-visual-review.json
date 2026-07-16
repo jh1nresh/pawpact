@@ -1,0 +1,8 @@
+{
+  "ok": true,
+  "visualQa": "pass",
+  "reviewer": "independent-visual-worker",
+  "qaNote": "All four ordered eight-frame rows preserve Orange Fist's identity and clean geometry, clearly deliver the requested motion arcs, and pass every deterministic atlas and state check.",
+  "reviewWarnings": [],
+  "repairRows": []
+}
