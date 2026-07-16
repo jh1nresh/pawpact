@@ -13,6 +13,7 @@ import {
   resolveMerges,
   simulateBattle,
   startBattle,
+  stepBattle,
   synergyState
 } from "../src/game-engine.js";
 
@@ -113,6 +114,54 @@ function preparedGame(seed) {
   addRosterUnit(game, "golden-dog", 1, 24);
   return game;
 }
+
+function animationFixture({ skill = false, lethal = false } = {}) {
+  const game = createGame(303);
+  game.roster = [];
+  addRosterUnit(game, "orange-cat", 1, 20);
+  assert.equal(startBattle(game).ok, true);
+  const player = game.battle.units.find((unit) => unit.team === "player");
+  const enemy = game.battle.units.find((unit) => unit.team === "enemy");
+  game.battle.units = [player, enemy];
+  player.x = 2;
+  player.y = 3;
+  player.speed = 999;
+  player.attack = lethal ? enemy.maxHp * 2 : 12;
+  player.energy = skill ? 100 : 0;
+  enemy.x = 2;
+  enemy.y = 2;
+  enemy.speed = 1;
+  enemy.dodge = 0;
+  enemy.armor = 0;
+  enemy.stunned = 1;
+  return { game, player, enemy };
+}
+
+test("battle actions expose Orange Fist combat animation states", () => {
+  const attack = animationFixture();
+  stepBattle(attack.game);
+  assert.equal(attack.player.animationState, "attack-combo");
+  assert.equal(attack.enemy.animationState, "hit-stagger");
+
+  const skill = animationFixture({ skill: true });
+  stepBattle(skill.game);
+  assert.equal(skill.player.animationState, "signature-skill");
+  assert.equal(skill.enemy.animationState, "hit-stagger");
+});
+
+test("animation states reset each tick and victory replaces the final action", () => {
+  const reset = animationFixture();
+  stepBattle(reset.game);
+  reset.player.stunned = 1;
+  reset.enemy.stunned = 1;
+  stepBattle(reset.game);
+  assert.equal(reset.player.animationState, null);
+  assert.equal(reset.enemy.animationState, null);
+
+  const victory = animationFixture({ lethal: true });
+  assert.equal(stepBattle(victory.game), "win");
+  assert.equal(victory.player.animationState, "victory");
+});
 
 test("seeded battles complete and produce the same receipt", () => {
   const first = preparedGame(91);

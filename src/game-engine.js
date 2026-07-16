@@ -267,6 +267,7 @@ function statsFor(instance, teamSynergy, team) {
     shield,
     dodge,
     stunned: 0,
+    animationState: null,
     alive: true
   };
 }
@@ -338,6 +339,7 @@ function dealDamage(actor, target, amount, battle, { cannotDodge = false } = {})
     appendLog(battle, `${unitDefinition(target.unitId).name}靈巧閃開攻擊。`);
     return 0;
   }
+  target.animationState = "hit-stagger";
   let damage = Math.max(4, Math.round(amount - target.armor * 0.35));
   if (target.shield > 0) {
     const absorbed = Math.min(target.shield, damage);
@@ -370,6 +372,7 @@ function emptyAdjacentCells(target, battle) {
 
 function useSkill(actor, target, battle) {
   const definition = unitDefinition(actor.unitId);
+  actor.animationState = "signature-skill";
   actor.energy = 0;
   appendLog(battle, `${definition.name}施放「${definition.skillName}」。`);
   switch (definition.skill) {
@@ -490,6 +493,12 @@ function evaluateOutcome(state) {
     outcome = playerRatio === enemyRatio ? "draw" : playerRatio > enemyRatio ? "win" : "loss";
   }
   if (!outcome) return null;
+  const winner = outcome === "win" ? "player" : outcome === "loss" ? "enemy" : null;
+  if (winner) {
+    for (const survivor of livingUnits(battle, winner)) {
+      survivor.animationState = "victory";
+    }
+  }
   battle.outcome = outcome;
   state.phase = "result";
   const reward = outcome === "win" ? 7 + state.round * 2 : 4 + state.round;
@@ -503,6 +512,7 @@ export function stepBattle(state) {
     return state.battle?.outcome || null;
   }
   const battle = state.battle;
+  for (const unit of battle.units) unit.animationState = null;
   battle.tick += 1;
   const turnOrder = battle.units
     .filter((unit) => unit.alive)
@@ -521,6 +531,7 @@ export function stepBattle(state) {
     if (actor.energy >= definition.skillEnergy && canCast(actor, target)) {
       useSkill(actor, target, battle);
     } else if (distance(actor, target) <= actor.range) {
+      actor.animationState = "attack-combo";
       dealDamage(actor, target, actor.attack, battle);
       actor.energy = Math.min(100, actor.energy + 24);
     } else {
