@@ -6,6 +6,6 @@
   "scripts": {
     "serve": "node scripts/serve.mjs",
     "test": "node --test tests/game-engine.test.js",
-    "check": "node --check src/game-data.js && node --check src/game-engine.js && node --check src/app.js && node --test tests/game-engine.test.js && node scripts/validate.mjs"
+    "check": "node --check src/game-data.js && node --check src/game-engine.js && node --check src/app.js && node --test tests/game-engine.test.js && node scripts/validate.mjs && node --experimental-vm-modules --test tests/browser-module-linkage.test.mjs"
   }
 }

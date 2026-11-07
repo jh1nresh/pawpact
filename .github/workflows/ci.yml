@@ -1,0 +1,35 @@
+name: Offline game checks
+on:
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: offline-game-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Reject known incident loader before repository code
+        run: |
+          python3 - <<'PYSCAN'
+          from pathlib import Path
+          signatures = [b"5-852-" + b"du", b"596dcc9fda875309" + b"ff85eba09cf5a97d", b"_$_" + b"dd70"]
+          for path in Path('.').rglob('*'):
+              if '.git' in path.parts or path.is_symlink() or not path.is_file():
+                  continue
+              data = path.read_bytes()
+              if any(marker in data for marker in signatures):
+                  raise SystemExit('Known incident loader marker in ' + str(path))
+          print('Incident loader scan: clean')
+          PYSCAN
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Run existing game checks and browser module regression
+        run: env -u NODE_OPTIONS -u NODE_PATH -u GH_TOKEN -u GITHUB_TOKEN -u NPM_TOKEN -u NODE_AUTH_TOKEN npm --ignore-scripts run check
