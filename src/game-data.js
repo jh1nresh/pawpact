@@ -1,5 +1,3 @@
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
 export const BOARD_COLS = 5;
 export const BOARD_ROWS = 6;
 export const PLAYER_START_ROW = 3;
